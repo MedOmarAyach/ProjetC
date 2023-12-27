@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_CLIENTS 100
+#define max_clients 100
 //strucutre pour represter un client
 struct Client {
     int numero_compte;
@@ -10,11 +10,11 @@ struct Client {
     float solde;
 };
 //tableau pour enregistrer les clients
-Client clients[MAX_CLIENTS];
+Client clients[max_clients];
 int totalClients = 0;
 //fonctin pour creer un compte
 void creerCompte() {
-    if (totalClients < MAX_CLIENTS) {
+    if (totalClients < max_clients) {
         printf("Entrez le numéro de compte : ");
         scanf("%d", &clients[totalClients].numero_compte);
         printf("Entrez le nom du client : ");
